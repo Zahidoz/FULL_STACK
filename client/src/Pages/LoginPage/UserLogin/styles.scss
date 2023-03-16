@@ -1,0 +1,53 @@
+.form-s{
+    padding: 4em 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    img{
+        max-width: 40em;
+        max-height: 30em;
+    }
+    form{
+        border-radius: 1em;
+        min-height: 25em;
+        border: 3px dashed rgba(210, 210, 210, 0.409);
+        padding: 3em 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+        h1{
+            letter-spacing: .07em;
+            font-size: 2.2em;
+            font-weight: 500;
+        }
+        input{
+            width: 20em;
+            padding: 1em;
+            color: #fff;
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.539);
+            transition: .2s;
+            &::placeholder{
+                color: #fff;
+            }
+            &:focus{
+                border-bottom: 1px solid #fff;
+            }
+        }
+        button{
+            margin-top: 2em;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 1em 2em;
+            transition: .2s;
+            &:hover{
+                background: rgba(255, 255, 255, 0.891);
+                color: #000;
+                border-radius: 1em;
+            }
+        }
+    }
+}

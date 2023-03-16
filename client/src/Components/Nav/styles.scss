@@ -1,0 +1,104 @@
+@mixin flex($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+nav {
+  font-size: 10px;
+  padding: 3em 4em;
+  .container {
+    @include flex(2em);
+    justify-content: space-between;
+    position: relative;
+    h1 {
+      color: #fff;
+      letter-spacing: 0.12em;
+      font-size: 3em;
+      font-weight: 400;
+    }
+    ul {
+      @include flex(3em);
+      li {
+        font-size: 1.5em;
+        color: rgb(210, 210, 210);
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        letter-spacing: 0.1em;
+        transition: 0.4s;
+        &:hover {
+          border-color: #fff;
+          color: #fff;
+        }
+      }
+    }
+    .btn-c {
+      @include flex(2em);
+      button {
+        padding: 0.8em 1.6em;
+        font-size: 1.6em;
+        color: #fff;
+      }
+      img {
+        max-width: 35px;
+        cursor: pointer;
+      }
+      #btn-signUp {
+        border: 1px solid #fff;
+        border-radius: 8px;
+        transition: 0.2s;
+        &:hover {
+          background: #fff;
+          color: black;
+        }
+      }
+    }
+    .res-nav {
+      position: absolute;
+      top: 150%;
+      right: 0;
+      border-left: .1em solid rgba(255, 255, 255, 0.265);
+      padding: 3em;
+      display: none;
+      &.active-nav{
+        display: block;
+      }
+      .res-nav-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 2em;
+        h2 {
+          color: rgba(255, 255, 255, 0.518);
+          font-size: 2.2em;
+          font-weight: 400;
+          letter-spacing: .1em;
+        }
+        li {
+          font-size: 1.4em;
+          letter-spacing: .1em;
+          cursor: pointer;
+        }
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      ul {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      .btn-c {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    font-size: 8px;
+    .container {
+    }
+  }
+}
